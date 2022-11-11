@@ -1,0 +1,21 @@
+<form class="form mat-elevation-z8"  >
+  <h1 >Atualizando Técnico</h1>
+  <mat-form-field color="accent" class="full-width" >
+    <mat-label>Nome</mat-label>
+    <input [readonly]="true" style="color: grey;" [(ngModel)]="tecnico.nome"  [formControl]="nome" maxlength="100" matInput placeholder="Ex. Maria Alves ">
+  </mat-form-field>
+
+  <mat-form-field  color="accent" class="full-width" >
+    <mat-label >CPF</mat-label>
+    <input [readonly]="true" style="color: grey;" [(ngModel)]="tecnico.cpf" [formControl]="cpf" maxlength="15"  matInput placeholder="Ex. 000.000.000-00">
+  </mat-form-field>
+
+  <mat-form-field  color="accent" class="full-width" >
+    <mat-label >Telefone</mat-label>
+    <input [readonly]="true" style="color: grey;" [(ngModel)]="tecnico.telefone" [formControl]="telefone"  maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
+  </mat-form-field>
+
+  <button class="mat-elevation-z8" (click)="onDelete()" mat-stroked-button color="accent" >Delete</button>
+  <button class="mat-elevation-z8" (click)="onCancel()" mat-stroked-button color="warn">Cancelar</button>
+</form>
+
